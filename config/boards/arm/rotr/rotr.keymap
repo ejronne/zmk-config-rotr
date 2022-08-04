@@ -31,7 +31,7 @@
 		    bindings
 			= <&macro_press &kp LWIN>
 			, <&macro_press &kp LSHIFT >
-			, <&macro_tap &kp R >
+			, <&macro_tap &kp LEFT >
 			, <&macro_release &kp LSHFT>
 			, <&macro_release &kp LWIN>
 			;
@@ -41,28 +41,9 @@
 		compatible = "zmk,keymap";
 
 		default_layer {
-			//PREV | PLAY/PAUSE | NEXT
-			bindings = <&kp C_MUTE &lt 4 F13 &kp C_PP>;
+			// WIN+SHIFT+LEFT | MUTE/UNMUTE | WIN+SHIFT+R
+			bindings = <&snip_tool &C_MUTE &window_swap>;
 			sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
-		};
-		one {
-			// WIN+SHIFT+S | MUTE/UNMUTE | WIN+SHIFT+R
-			bindings = <&snip_tool &lt 4 C_MUTE &window_swap >;
-			sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
-		};
-		two {
-			//PREV | PLAY/PAUSE | NEXT
-			bindings = <&kp LEFT &lt 4 SPACE &kp RIGHT>;
-			sensor-bindings = <&inc_dec_kp PG_UP PG_DN>;
-		};
-		three {
-			//PREV | PLAY/PAUSE | NEXT
-			bindings = <&kp C_MUTE &lt 4 F13 &kp C_PP>;
-		};
-		shift {
-			//PREV | PLAY/PAUSE | NEXT
-			bindings = <&bt BT_CLR &trans &rgb_ug RGB_TOG>;
-			sensor-bindings = <&def_lshft>;
 		};
 	};
 };
