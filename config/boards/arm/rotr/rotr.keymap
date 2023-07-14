@@ -31,7 +31,7 @@
 		    bindings
 			= <&macro_press &kp LWIN>
 			, <&macro_press &kp LSHIFT >
-			, <&macro_tap &kp LEFT >
+			, <&macro_tap &kp RIGHT >
 			, <&macro_release &kp LSHFT>
 			, <&macro_release &kp LWIN>
 			;
@@ -46,9 +46,9 @@
 			bindings = <&snip_tool &lt 4 C_MUTE &window_swap>;
 			sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
 			ledoverride;
-			r = <50>;
-			g = <100>;
-			b = <100>;
+			r = <0>;
+			g = <0>;
+			b = <0>;
 		};
 		one {
 			//PREV | PLAY/PAUSE | NEXT
